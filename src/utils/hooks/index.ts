@@ -1,3 +1,5 @@
 import useInternetConnection from './useInternetConnection';
 
-export { useInternetConnection };
+export {
+  useInternetConnection,
+};

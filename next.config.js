@@ -10,4 +10,7 @@ module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   basePath: '',
+  experimental: {
+    appDir: true,
+  },
 });

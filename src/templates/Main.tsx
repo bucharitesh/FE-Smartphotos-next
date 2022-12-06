@@ -1,13 +1,15 @@
 import type { ReactNode } from 'react';
+import { Meta } from "@/layouts/Meta";
 
 type IMainProps = {
-  meta: ReactNode;
+  title: string;
+  description: string;
   children: ReactNode;
 };
 
 const Main = (props: IMainProps) => (
   <div className="antialiased">
-    {props.meta}
+    <Meta title={props.title} description={props.description}/>
     {props.children}
   </div>
 );

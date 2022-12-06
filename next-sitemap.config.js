@@ -1,5 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://example.com', // FIXME: Change to the production URL
+  siteUrl: 'https://smartphotos.xyz',
   generateRobotsTxt: true,
+  experimental: {
+    appDir: true,
+  },
 };
