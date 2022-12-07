@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import type { ReactNode } from 'react';
 
 import { Meta } from './Meta';
@@ -20,9 +20,9 @@ describe('Meta component', () => {
 
       render(<Meta title={title} description="Random description" />);
 
-      // await waitFor(() => {
-      // expect(document.title).toEqual(title);
-      // });
+      await waitFor(() => {
+      expect(document.title).equal(title);
+      });
     });
   });
 });

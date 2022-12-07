@@ -13,4 +13,7 @@ module.exports = withBundleAnalyzer({
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ['homingos-magik.s3.ap-south-1.amazonaws.com'],
+  },
 });
