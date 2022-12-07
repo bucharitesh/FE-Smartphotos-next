@@ -1,18 +1,35 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Showcase = () => {
   return (
     <div className="grid h-[70rem] w-screen grid-rows-2 gap-4  bg-brand_gray_1 px-[10%] py-20">
       <div className="mb-6 grid w-full grid-cols-2 gap-10 overflow-hidden rounded-3xl bg-brand_black text-brand_white">
         <div className="flex h-full w-full flex-col items-center justify-center p-10">
-          <h2 className="mb-8 w-5/6 self-start text-5xl font-black">Give Your Photos An Upgrade!</h2>
+          <h2 className="mb-8 w-5/6 self-start text-5xl font-black">
+            Give Your Photos An Upgrade!
+          </h2>
           <p className="text-xl text-brand_gray_1">
             Express your heart out with moving pictures that celebrate your memories and milestones
             just the way you remember it!
           </p>
         </div>
         <div className="grid grid-cols-3 gap-3 overflow-hidden">
-          <div className="flex h-full w-full flex-col gap-3">
+          <motion.div
+            initial={{
+              y: 0,
+            }}
+            animate={{ y: '-41%' }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            className="flex h-full w-full flex-col gap-3"
+          >
             <div className="relative h-72 w-full">
               <video muted loop autoPlay playsInline className="h-full w-full object-cover">
                 <source
@@ -37,9 +54,21 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-          </div>
-          <div className="flex h-full w-full flex-col gap-3">
-            <div className="relative h-40 w-full ">
+          </motion.div>
+          <motion.div
+            initial={{
+              y: '-22%',
+            }}
+            animate={{ y: 0 }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            className="flex h-full w-full flex-col gap-3"
+          >
+            <div className="relative h-36 w-full ">
               <Image
                 src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-2.webp"
                 alt="show-1"
@@ -47,7 +76,7 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative h-40 w-full">
+            <div className="relative h-36 w-full">
               <video muted loop autoPlay playsInline className="h-full w-full object-cover">
                 <source
                   src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-vid-2.webm"
@@ -55,7 +84,7 @@ const Showcase = () => {
                 />
               </video>
             </div>
-            <div className="relative h-40 w-full">
+            <div className="relative h-36 w-full">
               <Image
                 src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-3.webp"
                 alt="show-1"
@@ -63,7 +92,7 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative h-40 w-full">
+            <div className="relative h-36 w-full">
               <Image
                 src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-4.webp"
                 alt="show-1"
@@ -71,8 +100,20 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-          </div>
-          <div className="flex h-full w-full flex-col gap-3">
+          </motion.div>
+          <motion.div
+            initial={{
+              y: '0',
+            }}
+            animate={{ y: "-24%" }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            className="flex h-full w-full flex-col gap-3"
+          >
             <div className="relative h-40 w-full">
               <Image
                 src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-5.webp"
@@ -96,7 +137,7 @@ const Showcase = () => {
                 fill
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="grid h-full w-full grid-cols-2 gap-10">
@@ -123,7 +164,7 @@ const Showcase = () => {
           <img
             src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-scan.png"
             alt="scan"
-            className='h-full w-auto pr-6 pt-6'
+            className="h-full w-auto pr-6 pt-6"
           />
         </div>
       </div>

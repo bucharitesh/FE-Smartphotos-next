@@ -1,9 +1,24 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Button from './Button';
 
-const Navbar = ({grayBg = false}: {grayBg?: boolean}) => {
+const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
   return (
-    <nav className={`flex items-center justify-between px-[10%] py-6 ${grayBg ? "bg-brand_gray_1" : "bg-brand_white"}`}>
+    <motion.nav
+      className={`flex items-center justify-between px-[10%] py-6 ${
+        grayBg ? 'bg-brand_gray_1' : 'bg-brand_white'
+      }`}
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <div className="relative h-12 w-40">
         <Image
           src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/sm-logo-blue.svg"
@@ -12,7 +27,7 @@ const Navbar = ({grayBg = false}: {grayBg?: boolean}) => {
         />
       </div>
       <Button>Download App</Button>
-    </nav>
+    </motion.nav>
   );
 };
 
