@@ -25,7 +25,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// linear-gradient(113.97deg, #EC4899 1.14%, #8B5CF6 100%)
-
-// linear-gradient(90.89deg, #60A5FA 3.1%, #2563EB 99.7%)

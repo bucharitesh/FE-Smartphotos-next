@@ -1,7 +1,15 @@
-import Home from '@/components/organisms/home/Home';
+import Hero from './Hero';
+import Showcase from './Showcase';
+import Testimonials from './Testimonials';
 
 const Page = () => {
-  return <Home />;
+  return (
+    <div>
+      <Hero />
+      <Showcase />
+      <Testimonials />
+    </div>
+  );
 };
 
 export default Page;

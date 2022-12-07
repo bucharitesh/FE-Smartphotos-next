@@ -1,10 +1,15 @@
 import { Main } from '@/templates/Main';
-import Layout from '@/components/organisms/other/Layout';
+import Navbar from '@/shared/Navbar';
+import Footer from '@/shared/Footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Main title="" description="">
-      <Layout>{children}</Layout>
+      <div>
+        <Navbar grayBg />
+        {children}
+        <Footer />
+      </div>
     </Main>
   );
 }
