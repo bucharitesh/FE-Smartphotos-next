@@ -7,7 +7,7 @@ import Button from './Button';
 const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
   return (
     <motion.nav
-      className={`flex items-center justify-between px-[10%] py-6 ${
+      className={`flex items-center justify-center px-[10%] py-6 md:justify-between ${
         grayBg ? 'bg-brand_gray_1' : 'bg-brand_white'
       }`}
       initial={{ opacity: 0 }}
@@ -17,7 +17,6 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
           duration: 0.3,
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="relative h-12 w-40">
         <Image
@@ -26,7 +25,7 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
           fill
         />
       </div>
-      <Button>Download App</Button>
+      <Button className='hidden md:block'>Download App</Button>
     </motion.nav>
   );
 };

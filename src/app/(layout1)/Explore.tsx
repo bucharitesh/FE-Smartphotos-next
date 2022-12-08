@@ -9,7 +9,7 @@ const data = [
 
 const Video = ({ vidUrl }: { vidUrl: string }) => {
   return (
-    <div className='h-full w-full overflow-hidden rounded-3xl'>
+    <div className='h-96 w-full min-w-[20rem] overflow-hidden rounded-3xl lg:min-w-0'>
       <video key={vidUrl} autoPlay muted loop playsInline className="h-full w-full object-cover">
         <source src={vidUrl} type="video/webm" />
       </video>
@@ -19,13 +19,13 @@ const Video = ({ vidUrl }: { vidUrl: string }) => {
 
 const Explore = () => {
   return (
-    <div className="flex h-[55rem] flex-col justify-between bg-brand_black px-[10%] py-20 text-brand_white">
+    <div className="flex flex-col justify-between bg-brand_black px-6 py-20 text-brand_white lg:min-h-[55rem] lg:px-[10%]">
       <div className='mb-14 flex flex-col items-center gap-5 text-center'>
-        <h2 className='bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-7xl font-black text-transparent'>Little Moments, Big Memories!</h2>
-        <p className='w-1/2 text-2xl font-medium text-brand_gray_1'>Explore how SmartPhotos brings memories alive with extraordinary experiences!</p>
+        <h2 className='bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-6xl font-black text-transparent lg:text-7xl'>Little Moments, Big Memories!</h2>
+        <p className='w-full text-xl font-medium text-brand_gray_1 md:w-1/2 lg:text-2xl'>Explore how SmartPhotos brings memories alive with extraordinary experiences!</p>
         <Button>Download App</Button>
       </div>
-      <div className='grid h-96 grid-cols-4 gap-6'>
+      <div className='flex w-full gap-8 overflow-x-auto lg:grid lg:h-96 lg:grid-cols-4 lg:overflow-x-hidden'>
         {data.map((item) => {
           return <Video key={item} vidUrl={item} />;
         })}

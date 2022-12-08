@@ -110,7 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={AppConfig.locale}>
       <head />
-      <body className={`${manrope.className} ${gilroy.className}`}>{isOffline ? <div>No Internet Page</div> : children}</body>
+      <body className={`${manrope.className} ${gilroy.className} w-screen overflow-x-hidden`}>{isOffline ? <div>No Internet Page</div> : children}</body>
     </html>
   );
 }
