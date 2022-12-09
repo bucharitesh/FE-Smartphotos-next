@@ -1,7 +1,7 @@
 'use client';
 
 import Button from '@/shared/Button';
-import Image from 'next/image';
+import InfiniteLooper from '@/shared/InfiniteLooper';
 import { motion } from 'framer-motion';
 
 const data = [
@@ -29,6 +29,14 @@ const data = [
         'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
       comment: 'This reminds me of Harry Potter! So Magical!',
     },
+    {
+      name: 'Olaia irigoyen',
+      username: 'olaiairi',
+      avatar_url:
+        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      comment:
+        'Our customers have experienced the magical video prints and never looked back ever since!',
+    },
   ],
   [
     {
@@ -52,6 +60,14 @@ const data = [
       avatar_url:
         'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-4.webp',
       comment: 'Received this as a gift and never expected it to be so amazing!',
+    },
+    {
+      name: 'Olaia irigoyen',
+      username: 'olaiairi',
+      avatar_url:
+        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      comment:
+        'Our customers have experienced the magical video prints and never looked back ever since!',
     },
   ],
   [
@@ -77,6 +93,14 @@ const data = [
         'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
       comment: 'My wife loved this! I made a SmartPhoto of our wedding and it was priceless!',
     },
+    {
+      name: 'Olaia irigoyen',
+      username: 'olaiairi',
+      avatar_url:
+        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      comment:
+        'Our customers have experienced the magical video prints and never looked back ever since!',
+    },
   ],
   [
     {
@@ -101,20 +125,27 @@ const data = [
         'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
       comment: 'Magical!',
     },
+    {
+      name: 'Olaia irigoyen',
+      username: 'olaiairi',
+      avatar_url:
+        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      comment:
+        'Our customers have experienced the magical video prints and never looked back ever since!',
+    },
   ],
 ];
 
 const Testimonials = () => {
   return (
     <div
-      className="h-full px-6 py-20 lg:min-h-[60rem] lg:px-[10%]"
+      className="h-full px-6 pt-20 lg:min-h-[60rem] lg:px-[10%]"
     >
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
         <motion.h2
-          initial={{ opacity: 0, x: -40, y: 40 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
-            x: 0,
             y: 0,
             transition: {
               duration: 1,
@@ -126,10 +157,9 @@ const Testimonials = () => {
           Over 1 Million Memories, Re-Lived!
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, x: -40, y: 40 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
-            x: 0,
             y: 0,
             transition: {
               duration: 1,
@@ -141,41 +171,15 @@ const Testimonials = () => {
           Our customers have experienced the magical video prints and never looked back ever since!
         </motion.p>
       </div>
-      <div className="relative py-10 px-4 md:p-10">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="relative px-4 pt-10 md:px-10">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4">
           {data.map((item, i) => {
             return (
-              <div key={`item_${i}`} className="flex w-full flex-col gap-6">
-                {item.map((subItem, ind) => {
-                  return (
-                    <motion.div
-                      initial={{ opacity: 0, x: -40, y: 40 }}
-                      whileInView={{
-                        opacity: 1,
-                        x: 0,
-                        y: 0,
-                        transition: {
-                          duration: 1,
-                        },
-                      }}
-                      viewport={{ once: true }}
-                      key={`subItem_${ind}`}
-                      className={`h-min w-full rounded-3xl bg-brand_white p-6 shadow-xl `}
-                    >
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                          <Image src={subItem.avatar_url} alt={subItem.username} fill />
-                        </div>
-                        <div>
-                          <p className="text-md font-black text-brand_black">{subItem.name}</p>
-                          <p className="text-sm text-brand_gray_6">@{subItem.username}</p>
-                        </div>
-                      </div>
-                      <p className="text-brand_black">{subItem.comment}</p>
-                    </motion.div>
-                  );
-                })}
-              </div>
+              <InfiniteLooper
+                direction={i === 0 || i === 2 ? 'down' : 'up'}
+                key={`item_${i}`}
+                list={item}
+              />
             );
           })}
         </div>
