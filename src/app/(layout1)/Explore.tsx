@@ -1,8 +1,11 @@
 'use client';
 
+import { GlobalContext } from '@/context/GlobalState';
 import Button from '@/shared/Button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useContext } from 'react';
+import { AiFillPlayCircle } from 'react-icons/ai';
 
 // const data = [
 //   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm',
@@ -12,13 +15,31 @@ import Image from 'next/image';
 // ];
 
 const posters = [
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
+  {
+    id: '1',
+    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
+    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm',
+  },
+  {
+    id: '2',
+    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
+    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_2.webm',
+  },
+  {
+    id: '3',
+    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
+    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_3.webm',
+  },
+  {
+    id: '4',
+    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
+    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_4.webm',
+  },
 ];
 
 const Explore = () => {
+  const { setVideoPlaying }: any = useContext(GlobalContext);
+
   return (
     <div className="flex flex-col justify-between bg-brand_black px-6 py-20 text-brand_white lg:min-h-[55rem] lg:px-[10%]">
       <motion.div
@@ -45,10 +66,13 @@ const Explore = () => {
         {posters.map((item) => {
           return (
             <div
-              key={item}
-              className="relative h-96 w-full min-w-[20rem] overflow-hidden rounded-3xl lg:min-w-0"
+              key={item.id}
+              className="relative h-96 w-full min-w-[20rem] cursor-pointer overflow-hidden rounded-3xl lg:min-w-0"
+              onClick={() => setVideoPlaying(item.vid)}
             >
-              <Image src={item} alt="Explore" fill className="h-full w-full object-cover" />
+              <Image src={item.img} alt="Explore" fill className="h-full w-full object-cover" />
+              <div className="absolute inset-0 h-full w-full bg-black/50"></div>
+              <AiFillPlayCircle className="absolute inset-0 m-auto h-10 w-10" />
             </div>
           );
         })}

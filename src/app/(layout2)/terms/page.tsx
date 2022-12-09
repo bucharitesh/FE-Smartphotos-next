@@ -6,7 +6,7 @@ const Page = async () => {
 
   return (
     <div className=" h-[80vh] w-full bg-red-100">
-      <PortableText value={settings[0].terms} />
+      <PortableText value={settings[0]?.terms} />
     </div>
   );
 };

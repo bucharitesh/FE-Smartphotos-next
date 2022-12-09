@@ -104,13 +104,14 @@ const gilroy = localFont({
 const manrope = localFont({ src: '../fonts/manrope/manrope-var.ttf', variable: '--font-manrope' });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  
   const isOffline = useInternetConnection();
 
   return (
     <html lang={AppConfig.locale}>
       <head />
-      <body className={`${manrope.className} ${gilroy.className} w-screen overflow-x-hidden`}>{isOffline ? <div>No Internet Page</div> : children}</body>
+      <body className={`${manrope.className} ${gilroy.className} w-screen overflow-x-hidden`}>
+        {isOffline ? <div>No Internet Page</div> : children}
+      </body>
     </html>
   );
 }
