@@ -5,7 +5,7 @@
   "author": "Ritesh Bucha (https://github.com/bucharitesh)",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run build:sanity && npm run build:web",
+    "build": "npm run build:web",
     "build:sanity": "npm --prefix studio run build",
     "build:web": "next build",
     "start": "next start",
