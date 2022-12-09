@@ -8,32 +8,32 @@ import { useContext } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
 
 // const data = [
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_2.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_3.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_4.webm',
+//   '/assets/landing/explore/sm_explore_vid_1.webm',
+//   '/assets/landing/explore/sm_explore_vid_2.webm',
+//   '/assets/landing/explore/sm_explore_vid_3.webm',
+//   '/assets/landing/explore/sm_explore_vid_4.webm',
 // ];
 
 const posters = [
   {
     id: '1',
-    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm',
+    img: '/assets/landing/explore/explore_1.webp',
+    vid: '/assets/landing/explore/sm_explore_vid_1.webm',
   },
   {
     id: '2',
-    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
-    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_2.webm',
+    img: '/assets/landing/explore/explore_2.webp',
+    vid: '/assets/landing/explore/sm_explore_vid_2.webm',
   },
   {
     id: '3',
-    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_3.webm',
+    img: '/assets/landing/explore/explore_1.webp',
+    vid: '/assets/landing/explore/sm_explore_vid_3.webm',
   },
   {
     id: '4',
-    img: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
-    vid: 'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_4.webm',
+    img: '/assets/landing/explore/explore_2.webp',
+    vid: '/assets/landing/explore/sm_explore_vid_4.webm',
   },
 ];
 
