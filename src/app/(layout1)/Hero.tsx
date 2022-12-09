@@ -1,14 +1,16 @@
 'use client';
 
 import Button from '@/shared/Button';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
+import { AnimatePresence, motion } from 'framer-motion';
+import { GlobalContext } from '@/context/GlobalState';
 
 const videoList = [1, 2, 3, 4, 5];
 
 const Hero = () => {
   const [randomVideoList, setRandomVideoList] = useState(videoList);
+  const { setVideoPlaying }: any = useContext(GlobalContext);
 
   function shuffle(array: number[]) {
     const arr = [...array];
@@ -58,7 +60,14 @@ const Hero = () => {
         </p>
         <div className="flex flex-col items-center gap-6 sm:flex-row md:gap-10">
           <Button className="py-3">Download App</Button>
-          <div className="flex items-center gap-2">
+          <div
+            className="flex cursor-pointer items-center gap-2"
+            onClick={() =>
+              setVideoPlaying(
+                'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm'
+              )
+            }
+          >
             <AiFillPlayCircle className="h-10 w-10 text-brand_yellow_1" />
             <p className="text-sm font-semibold text-brand_gray_3">Play Demo</p>
           </div>

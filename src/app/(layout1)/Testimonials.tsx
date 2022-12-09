@@ -3,6 +3,8 @@
 import Button from '@/shared/Button';
 import InfiniteLooper from '@/shared/InfiniteLooper';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Image from 'next/image';
 
 const data = [
   [
@@ -121,6 +123,8 @@ const data = [
 ];
 
 const Testimonials = () => {
+  const [page, setPage] = useState(1);
+
   return (
     <div className="h-full px-6 pt-20 lg:min-h-[60rem] lg:px-[10%]">
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
@@ -154,7 +158,7 @@ const Testimonials = () => {
         </motion.p>
       </div>
       <div className="relative px-4 pt-10 md:px-10">
-        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4">
+        <div className="hidden lg:grid lg:grid-cols-4">
           {data.map((item, i) => {
             return (
               <InfiniteLooper
@@ -165,13 +169,42 @@ const Testimonials = () => {
             );
           })}
         </div>
-        <div className="block md:hidden">
-          <Button className="mt-10 w-full border border-brand_blue_1 bg-brand_white text-brand_blue_1 shadow-md shadow-brand_blue_1">
+        <div className="grid grid-cols-1 gap-4  pb-10 md:grid-cols-2 lg:hidden">
+          {data
+            .slice(0, page)
+            .flat()
+            .map((item, i) => {
+              return (
+                <div key={`subItem_${i}`} className="flex flex-col gap-4">
+                  <div className={`h-min w-full rounded-3xl bg-brand_white p-6 shadow-lg `}>
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                        <Image src={item.avatar_url} alt={item.username} fill />
+                      </div>
+                      <div>
+                        <p className="text-md font-black text-brand_black">{item.name}</p>
+                        <p className="text-sm text-brand_gray_6">@{item.username}</p>
+                      </div>
+                    </div>
+                    <p className="text-brand_black">{item.comment}</p>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+
+        <div className="absolute inset-0 hidden bg-gradient-to-b from-brand_white via-transparent to-brand_white lg:block"></div>
+      </div>
+      {page <= 3 && (
+        <div className="mb-10 block px-4 md:hidden md:px-10">
+          <Button
+            onClick={() => setPage((prev) => Math.min(prev + 1, 4))}
+            className=" w-full border border-brand_blue_1 bg-brand_white text-brand_blue_1 shadow-md shadow-brand_blue_1"
+          >
             Load more
           </Button>
         </div>
-        <div className="absolute inset-0 hidden bg-gradient-to-b from-brand_white via-transparent to-brand_white lg:block "></div>
-      </div>
+      )}
     </div>
   );
 };

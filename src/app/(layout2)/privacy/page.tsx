@@ -7,7 +7,7 @@ const Page = async () => {
 
   return (
     <div className=" h-[80vh] w-full bg-red-100">
-    <PortableText value={settings[0].privacy} />
+    <PortableText value={settings[0]?.privacy} />
     </div>
 )};
 
