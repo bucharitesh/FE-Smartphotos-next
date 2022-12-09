@@ -118,7 +118,6 @@ const Testimonials = () => {
               duration: 1,
             },
           }}
-          
           className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-6xl font-black text-transparent lg:text-7xl"
         >
           Over 1 Million Memories, Re-Lived!
@@ -128,12 +127,11 @@ const Testimonials = () => {
           whileInView={{
             opacity: 1,
             x: 0,
-            y: 0, 
+            y: 0,
             transition: {
               duration: 1,
             },
           }}
-          
           className="w-full text-xl font-medium text-brand_gray_2 lg:w-1/2 lg:text-2xl"
         >
           Our customers have experienced the magical video prints and never looked back ever since!
@@ -156,7 +154,6 @@ const Testimonials = () => {
                           duration: 1,
                         },
                       }}
-                      
                       key={`subItem_${ind}`}
                       className={`h-min w-full rounded-3xl bg-brand_white p-6 shadow-xl `}
                     >
