@@ -1,0 +1,38 @@
+name: Prod
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TWO_TWO_DEV }}
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install --global vercel@latest
+      - run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - run: vercel env pull .env.production.local --token=${{ secrets.VERCEL_TOKEN }}
+      - run: vercel build --token=${{ secrets.VERCEL_TOKEN }} --prod
+      - run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --prod
+
+  slackNotification:
+    name: Slack Notification
+    needs:
+      - Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Workflow Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: services-alerts
+          SLACK_TITLE: What has Changed
+          SLACK_USERNAME: Flam-Services-Bot
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://avatars.slack-edge.com/2021-08-04/2345524105683_46dab77f1d18137c3fa2_88.jpg
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_FOOTER: SMARTPHOTOS WEBSITE
