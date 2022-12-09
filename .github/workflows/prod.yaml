@@ -2,12 +2,12 @@ name: Prod
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_PROD }}
 
 on:
   push:
     branches:
-      - dev
+      - main
 jobs:
   Deploy:
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://avatars.slack-edge.com/2021-08-04/2345524105683_46dab77f1d18137c3fa2_88.jpg
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_FOOTER: SMARTPHOTOS WEBSITE
+          SLACK_FOOTER: SMARTPHOTOS WEBSITE PROD
