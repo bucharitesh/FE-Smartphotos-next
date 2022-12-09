@@ -8,12 +8,11 @@ module.exports = withBundleAnalyzer({
     dirs: ['.'],
   },
   poweredByHeader: false,
-  trailingSlash: true,
-  basePath: '',
+  trailingSlash: false,
+  swcMinify: true,
   experimental: {
     appDir: true,
   },
-  images: {
-    domains: ['homingos-magik.s3.ap-south-1.amazonaws.com'],
-  },
+  reactStrictMode: false,
+  output: 'standalone',
 });

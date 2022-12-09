@@ -64,7 +64,7 @@ const Hero = () => {
             className="flex cursor-pointer items-center gap-2"
             onClick={() =>
               setVideoPlaying(
-                'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm'
+                '/assets/landing/explore/sm_explore_vid_1.webm'
               )
             }
           >
