@@ -103,7 +103,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[0]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[0]}.webm`}
                 type="video/webm"
               />
             </motion.video>
@@ -147,7 +147,7 @@ const Hero = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[1]}.webm`}
+                  src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[1]}.webm`}
                   type="video/webm"
                 />
               </motion.video>
@@ -184,7 +184,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[2]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[2]}.webm`}
                 type="video/webm"
               />
             </motion.video>
@@ -217,7 +217,7 @@ const Hero = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[3]}.webm`}
+                  src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[3]}.webm`}
                   type="video/webm"
                 />
               </motion.video>
@@ -265,7 +265,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[4]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[4]}.webm`}
                 type="video/webm"
               />
             </motion.video>

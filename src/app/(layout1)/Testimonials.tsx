@@ -11,31 +11,27 @@ const data = [
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Our customers have experienced the magical video prints and never looked back ever since!',
     },
     {
       name: 'Amelie',
       username: 'AmelieStrom',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
       comment:
         "Sent our son's birthday SmartPhoto to grandma. She was as happy as I'd ever seen her!",
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment: 'This reminds me of Harry Potter! So Magical!',
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Our customers have experienced the magical video prints and never looked back ever since!',
     },
@@ -44,30 +40,26 @@ const data = [
     {
       name: 'Bryce Bjork',
       username: 'Bryce',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-3.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
       comment: 'Magical!',
     },
     {
       name: 'Lauren Will',
       username: 'willlau',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Getting my first SmartPhoto was so exciting! The AR experience along with the video was a nice touch!',
     },
     {
       name: 'Bryce Bjork',
       username: 'Bryce',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-4.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-4.webp',
       comment: 'Received this as a gift and never expected it to be so amazing!',
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Our customers have experienced the magical video prints and never looked back ever since!',
     },
@@ -76,30 +68,26 @@ const data = [
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
       comment:
         "It's so lovely to have my Graduation Day preserved in this SmartPhoto with Photo & Video!",
     },
     {
       name: 'Amelie',
       username: 'AmelieStrom',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-3.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
       comment: "I'm in love with this!",
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
       comment: 'My wife loved this! I made a SmartPhoto of our wedding and it was priceless!',
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Our customers have experienced the magical video prints and never looked back ever since!',
     },
@@ -108,30 +96,26 @@ const data = [
     {
       name: 'Lauren Will',
       username: 'willlau',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-3.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
       comment:
         ' I can never go back to normal photos again! The SmartPhotos experience has been so exciting!',
     },
     {
       name: 'Bryce Bjork',
       username: 'Bryce',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-4.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-4.webp',
       comment: 'This has made my holiday gifting so easy!',
     },
     {
       name: 'Bryce Bjork',
       username: 'Bryce',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-2.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
       comment: 'Magical!',
     },
     {
       name: 'Olaia irigoyen',
       username: 'olaiairi',
-      avatar_url:
-        'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/testimonials/sm-testimonials-1.webp',
+      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
       comment:
         'Our customers have experienced the magical video prints and never looked back ever since!',
     },

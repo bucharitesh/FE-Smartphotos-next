@@ -1,13 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Showcase = () => {
   return (
-    <div
-      className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]"
-    >
+    <div className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{
@@ -46,15 +44,12 @@ const Showcase = () => {
           >
             <div className="relative h-72 w-full">
               <video muted loop autoPlay playsInline className="h-full w-full object-cover">
-                <source
-                  src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-vid-1.webm"
-                  type="video/webm"
-                />
+                <source src="/assets/landing/showcase/sm-showcase-vid-1.webm" type="video/webm" />
               </video>
             </div>
             <div className="relative h-40 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-1.webp"
+                src="/assets/landing/showcase/sm-showcase-img-1.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
@@ -62,7 +57,7 @@ const Showcase = () => {
             </div>
             <div className="relative h-72 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-3.webp"
+                src="/assets/landing/showcase/sm-showcase-img-3.webp"
                 alt="show-3"
                 fill
                 className="object-cover"
@@ -85,7 +80,7 @@ const Showcase = () => {
           >
             <div className="relative h-36 w-full ">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-2.webp"
+                src="/assets/landing/showcase/sm-showcase-img-2.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
@@ -93,15 +88,12 @@ const Showcase = () => {
             </div>
             <div className="relative h-36 w-full">
               <video muted loop autoPlay playsInline className="h-full w-full object-cover">
-                <source
-                  src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-vid-2.webm"
-                  type="video/webm"
-                />
+                <source src="/assets/landing/showcase/sm-showcase-vid-2.webm" type="video/webm" />
               </video>
             </div>
             <div className="relative h-36 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-3.webp"
+                src="/assets/landing/showcase/sm-showcase-img-3.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
@@ -109,7 +101,7 @@ const Showcase = () => {
             </div>
             <div className="relative h-36 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-4.webp"
+                src="/assets/landing/showcase/sm-showcase-img-4.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
@@ -132,7 +124,7 @@ const Showcase = () => {
           >
             <div className="relative h-40 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-5.webp"
+                src="/assets/landing/showcase/sm-showcase-img-5.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
@@ -140,18 +132,14 @@ const Showcase = () => {
             </div>
             <div className="relative h-72 w-full">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-6.webp"
+                src="/assets/landing/showcase/sm-showcase-img-6.webp"
                 alt="show-1"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-40 w-full">
-              <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-img-7.webp"
-                alt="show-1"
-                fill
-              />
+              <Image src="/assets/landing/showcase/sm-showcase-img-7.webp" alt="show-1" fill />
             </div>
           </motion.div>
         </div>
@@ -161,7 +149,7 @@ const Showcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{
             opacity: 1,
-            y:0,
+            y: 0,
             transition: {
               duration: 0.7,
             },
@@ -178,7 +166,7 @@ const Showcase = () => {
             </p>
           </div>
           <img
-            src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-create.png"
+            src="/assets/landing/showcase/sm-showcase-create.webp"
             alt="create"
             className="h-full w-auto px-6 pb-6 lg:pr-6 lg:pl-0"
           />
@@ -202,7 +190,7 @@ const Showcase = () => {
             </p>
           </div>
           <img
-            src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/showcase/sm-showcase-scan.png"
+            src="/assets/landing/showcase/sm-showcase-scan.webp"
             alt="scan"
             className="h-full w-auto px-6 pt-6 lg:pr-6 lg:pl-0"
           />

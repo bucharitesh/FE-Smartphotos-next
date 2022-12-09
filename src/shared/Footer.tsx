@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex w-full flex-col items-stretch justify-between border-b-0 border-brand_gray_4 pb-6 md:flex-row md:items-center md:border-b">
         <div className="relative h-10 w-40 cursor-pointer">
           <Image
-            src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/sm-logo-white.svg"
+            src="/assets/common/sm-logo-white.svg"
             alt="smartphoto"
             fill
           />
@@ -21,14 +21,14 @@ const Footer = () => {
         <div className="flex items-center gap-8">
           <div className="relative h-10 w-20 cursor-pointer">
             <Image
-              src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/flam-logo-white.svg"
+              src="/assets/common/flam-logo-white.svg"
               alt="flam"
               fill
             />
           </div>
           <div className="relative mt-3 h-10 w-28 cursor-pointer">
             <Image
-              src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/zingcam-logo-white.svg"
+              src="/assets/common/zingcam-logo-white.svg"
               alt="zingcam by flam"
               fill
             />
@@ -43,7 +43,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/discord-logo.svg"
+                src="/assets/common/discord-logo.svg"
                 alt="discord"
                 fill
               />
@@ -52,7 +52,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/yt-logo.svg"
+                src="/assets/common/yt-logo.svg"
                 alt="youtube"
                 fill
               />
@@ -61,7 +61,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/twitter-logo.svg"
+                src="/assets/common/twitter-logo.svg"
                 alt="twitter"
                 fill
               />
@@ -70,7 +70,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/ig-logo.svg"
+                src="/assets/common/ig-logo.svg"
                 alt="instagram"
                 fill
               />
@@ -79,7 +79,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/linkedin-logo.svg"
+                src="/assets/common/linkedin-logo.svg"
                 alt="linkedin"
                 fill
               />
@@ -88,7 +88,7 @@ const Footer = () => {
           <li>
             <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
               <Image
-                src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/reddit-logo.svg"
+                src="/assets/common/reddit-logo.svg"
                 alt="reddit"
                 fill
               />
