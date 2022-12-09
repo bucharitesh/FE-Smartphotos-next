@@ -9,11 +9,12 @@ const Showcase = () => {
       className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]"
     >
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{
           opacity: 1,
+          y: 0,
           transition: {
-            duration: 0.7,
+            duration: 0.4,
           },
         }}
         viewport={{ once: true }}
@@ -157,9 +158,10 @@ const Showcase = () => {
       </motion.div>
       <div className="grid h-full w-full grid-cols-1 gap-10 lg:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{
             opacity: 1,
+            y:0,
             transition: {
               duration: 0.7,
             },
@@ -182,9 +184,10 @@ const Showcase = () => {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{
             opacity: 1,
+            y: 0,
             transition: {
               duration: 0.7,
             },
