@@ -36,6 +36,7 @@
     "react-locomotive-scroll": "^0.2.2",
     "sanity": "^3.0.0-rc.0",
     "sass": "^1.56.2",
+    "server-only": "^0.0.1",
     "smooth-scrollbar": "^8.8.1",
     "smooth-scrollbar-react": "^2.4.1",
     "styled-components": "^5.3.6"
