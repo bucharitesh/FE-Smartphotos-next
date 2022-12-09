@@ -139,7 +139,7 @@ const data = [
 const Testimonials = () => {
   return (
     <div
-      className="h-full px-6 py-20 lg:min-h-[60rem] lg:px-[10%]"
+      className="h-full px-6 pt-20 lg:min-h-[60rem] lg:px-[10%]"
     >
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
         <motion.h2
