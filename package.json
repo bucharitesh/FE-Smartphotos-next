@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run build:sanity && npm run build:web",
-    "build:sanity": "npm --prefix studio run build",
+    "build:sanity": "npm --prefix sanity build",
     "build:web": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
