@@ -1,4 +1,8 @@
+'use client';
+
+import Button from '@/shared/Button';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const data = [
   [
@@ -102,23 +106,54 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <div className="h-[60rem] px-[10%] py-20">
+    <div className="h-full px-6 py-20 lg:min-h-[60rem] lg:px-[10%]">
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
-        <h2 className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-7xl font-black text-transparent">
+        <motion.h2
+          initial={{ opacity: 0, x: -40, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-6xl font-black text-transparent lg:text-7xl"
+        >
           Over 1 Million Memories, Re-Lived!
-        </h2>
-        <p className="w-1/2 text-2xl font-medium text-brand_gray_2">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: -40, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          className="w-full text-xl font-medium text-brand_gray_2 lg:w-1/2 lg:text-2xl"
+        >
           Our customers have experienced the magical video prints and never looked back ever since!
-        </p>
+        </motion.p>
       </div>
-      <div className="relative p-10">
-        <div className="grid grid-cols-4 gap-4">
+      <div className="relative py-10 px-4 md:p-10">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {data.map((item, i) => {
             return (
               <div key={`item_${i}`} className="flex w-full flex-col gap-6">
                 {item.map((subItem, ind) => {
                   return (
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, x: -40, y: 40 }}
+                      whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        transition: {
+                          duration: 1,
+                        },
+                      }}
                       key={`subItem_${ind}`}
                       className={`h-min w-full rounded-3xl bg-brand_white p-6 shadow-xl `}
                     >
@@ -132,16 +167,19 @@ const Testimonials = () => {
                         </div>
                       </div>
                       <p className="text-brand_black">{subItem.comment}</p>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
             );
           })}
         </div>
-        <div className='absolute inset-0 bg-gradient-to-b from-brand_white via-transparent to-brand_white '>
-
+        <div className="block md:hidden">
+          <Button className="mt-10 w-full border border-brand_blue_1 bg-brand_white text-brand_blue_1 shadow-md shadow-brand_blue_1">
+            Load more
+          </Button>
         </div>
+        <div className="absolute inset-0 hidden bg-gradient-to-b from-brand_white via-transparent to-brand_white lg:block "></div>
       </div>
     </div>
   );

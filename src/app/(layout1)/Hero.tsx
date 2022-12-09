@@ -27,7 +27,6 @@ const Hero = () => {
         arr[currentIndex],
       ];
     }
-
     return arr;
   }
 
@@ -40,12 +39,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="flex h-[55rem] w-screen flex-col items-center justify-between bg-white px-[10%] pt-16 pb-36">
+    <main className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]">
       <motion.div
         className="mb-14 flex flex-col items-center text-center"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{
           opacity: 1,
+          y: 0,
           transition: {
             duration: 0.7,
           },
@@ -56,7 +56,7 @@ const Hero = () => {
         <p className="my-6 text-xl font-medium text-brand_gray_2">
           Re-live your memories in Video Prints with extraordinary AR Experiences!
         </p>
-        <div className="flex items-center gap-10">
+        <div className="flex flex-col items-center gap-6 sm:flex-row md:gap-10">
           <Button className="py-3">Download App</Button>
           <div className="flex items-center gap-2">
             <AiFillPlayCircle className="h-10 w-10 text-brand_yellow_1" />
@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-      <div className="flex items-center gap-10">
+      <div className="flex w-full items-center justify-between gap-2 sm:justify-center sm:gap-10">
         <motion.div
           initial={{ scale: 0 }}
           whileInView={{
@@ -75,12 +75,12 @@ const Hero = () => {
             },
           }}
           viewport={{ once: true }}
-          className="h-40 w-52 overflow-hidden rounded-3xl bg-gray-200"
+          className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
           <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
                 duration: 0.4
@@ -100,7 +100,7 @@ const Hero = () => {
           </AnimatePresence>
         </motion.div>
 
-        <div className="flex flex-col justify-center gap-8">
+        <div className="flex flex-col justify-center gap-2 sm:gap-8">
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{
@@ -110,7 +110,7 @@ const Hero = () => {
               },
             }}
             viewport={{ once: true }}
-            className="h-24 w-52 overflow-hidden rounded-3xl bg-[#D1FAE5]"
+            className="h-10 w-[25vw] overflow-hidden rounded-3xl bg-[#D1FAE5] sm:h-24 sm:w-40 lg:w-52"
           ></motion.div>
           <motion.div
             initial={{ scale: 0 }}
@@ -121,12 +121,12 @@ const Hero = () => {
               },
             }}
             viewport={{ once: true }}
-            className="h-40 w-52 overflow-hidden rounded-3xl bg-gray-200"
+            className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-40 sm:w-40 lg:w-52"
           >
             <AnimatePresence mode="wait">
               <motion.video
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 key={randomVideoList[1]}
                 muted
@@ -154,12 +154,12 @@ const Hero = () => {
             },
           }}
           viewport={{ once: true }}
-          className="h-96 w-52 overflow-hidden rounded-3xl bg-gray-200"
+          className="h-48 w-[26vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-96 sm:w-40 lg:w-52"
         >
           <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
                 duration: 0.4
@@ -179,7 +179,7 @@ const Hero = () => {
           </AnimatePresence>
         </motion.div>
 
-        <div className="flex flex-col justify-center gap-8">
+        <div className="flex flex-col justify-center gap-2 sm:gap-8">
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{
@@ -189,12 +189,12 @@ const Hero = () => {
               },
             }}
             viewport={{ once: true }}
-            className="h-40 w-52 overflow-hidden rounded-3xl bg-gray-200"
+            className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200  sm:h-40 sm:w-40 lg:w-52"
           >
             <AnimatePresence mode="wait">
               <motion.video
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 key={randomVideoList[3]}
                 muted
@@ -219,7 +219,7 @@ const Hero = () => {
               },
             }}
             viewport={{ once: true }}
-            className="h-24 w-52 overflow-hidden rounded-3xl bg-[#FEF3C7]"
+            className="h-10 w-[25vw] overflow-hidden rounded-3xl bg-[#FEF3C7] sm:h-24 sm:w-40 lg:w-52"
           ></motion.div>
         </div>
 
@@ -233,12 +233,12 @@ const Hero = () => {
             },
           }}
           viewport={{ once: true }}
-          className="h-40 w-52 overflow-hidden rounded-3xl bg-gray-200"
+          className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
           <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
                 duration: 0.4

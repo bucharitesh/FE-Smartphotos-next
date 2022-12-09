@@ -17,6 +17,10 @@
   scrollbar-width: none; 
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind components;
 
 @tailwind utilities;
