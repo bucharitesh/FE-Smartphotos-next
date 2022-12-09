@@ -17,6 +17,7 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
           duration: 0.3,
         },
       }}
+      viewport={{ once: true }}
     >
       <div className="relative h-12 w-40">
         <Image
@@ -25,7 +26,7 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
           fill
         />
       </div>
-      <Button className='hidden md:block'>Download App</Button>
+      <Button className="hidden md:block">Download App</Button>
     </motion.nav>
   );
 };

@@ -5,12 +5,12 @@ import Testimonials from './Testimonials';
 
 const Page = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Showcase />
       <Testimonials />
       <Explore />
-    </div>
+    </>
   );
 };
 

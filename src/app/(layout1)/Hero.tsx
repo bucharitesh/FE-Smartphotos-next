@@ -39,7 +39,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]">
+    <div
+      className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]"
+    >
       <motion.div
         className="mb-14 flex flex-col items-center text-center"
         initial={{ opacity: 0, y: -20 }}
@@ -81,9 +83,10 @@ const Hero = () => {
             <motion.video
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               exit={{ opacity: 0 }}
               transition={{
-                duration: 0.4
+                duration: 0.4,
               }}
               key={randomVideoList[0]}
               muted
@@ -127,6 +130,7 @@ const Hero = () => {
               <motion.video
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 exit={{ opacity: 0 }}
                 key={randomVideoList[1]}
                 muted
@@ -162,8 +166,9 @@ const Hero = () => {
               whileInView={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
-                duration: 0.4
+                duration: 0.4,
               }}
+              viewport={{ once: true }}
               key={randomVideoList[2]}
               muted
               loop
@@ -195,6 +200,7 @@ const Hero = () => {
               <motion.video
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 exit={{ opacity: 0 }}
                 key={randomVideoList[3]}
                 muted
@@ -239,9 +245,10 @@ const Hero = () => {
             <motion.video
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               exit={{ opacity: 0 }}
               transition={{
-                duration: 0.4
+                duration: 0.4,
               }}
               key={randomVideoList[4]}
               muted
@@ -258,7 +265,7 @@ const Hero = () => {
           </AnimatePresence>
         </motion.div>
       </div>
-    </main>
+    </div>
   );
 };
 

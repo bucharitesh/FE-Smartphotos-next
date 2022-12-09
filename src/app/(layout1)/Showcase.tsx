@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 
 const Showcase = () => {
   return (
-    <div className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]">
+    <div
+      className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]"
+    >
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -14,7 +16,7 @@ const Showcase = () => {
             duration: 0.7,
           },
         }}
-        
+        viewport={{ once: true }}
         className="mb-6 grid h-[50rem] w-full grid-rows-2 gap-10 overflow-hidden rounded-3xl bg-brand_black text-brand_white lg:h-full lg:grid-cols-2 lg:grid-rows-1 "
       >
         <div className="order-2 flex h-full w-full flex-col items-center justify-center p-6 lg:order-1 lg:p-10">
@@ -38,6 +40,7 @@ const Showcase = () => {
               duration: 1,
               repeatDelay: 2,
             }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-72 w-full">
@@ -76,6 +79,7 @@ const Showcase = () => {
               duration: 1,
               repeatDelay: 2,
             }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-36 w-full ">
@@ -122,6 +126,7 @@ const Showcase = () => {
               duration: 1,
               repeatDelay: 2,
             }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-40 w-full">
@@ -159,7 +164,7 @@ const Showcase = () => {
               duration: 0.7,
             },
           }}
-          
+          viewport={{ once: true }}
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-gradient-to-br from-brand_pink_1 to-brand_blue_3 text-brand_white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
@@ -184,7 +189,7 @@ const Showcase = () => {
               duration: 0.7,
             },
           }}
-          
+          viewport={{ once: true }}
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
