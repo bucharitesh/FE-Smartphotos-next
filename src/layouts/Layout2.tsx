@@ -5,11 +5,9 @@ import Footer from '@/shared/Footer';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Main title="" description="">
-      <div>
         <Navbar grayBg />
         {children}
         <Footer />
-      </div>
     </Main>
   );
 }

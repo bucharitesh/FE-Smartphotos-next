@@ -1,11 +1,9 @@
-'use client';
-
 import { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
 // Initial State
 const initialState = {
-  videoPlaying: ""
+  videoPlaying: '',
 };
 
 // Create Context
@@ -18,8 +16,8 @@ export const GlobalProvider = ({ children }: any) => {
   // Actions
   function setVideoPlaying(value: string) {
     dispatch({
-      type: "SET_VIDEO_PLAYING",
-      payload: value
+      type: 'SET_VIDEO_PLAYING',
+      payload: value,
     });
   }
 
@@ -28,7 +26,7 @@ export const GlobalProvider = ({ children }: any) => {
       value={
         {
           videoPlaying: state.videoPlaying,
-          setVideoPlaying
+          setVideoPlaying,
         } as any
       }
     >
