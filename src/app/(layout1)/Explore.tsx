@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 // const data = [
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_2.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_3.webm',
-//   'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_4.webm',
+//   '/assets/landing/explore/sm_explore_vid_1.webm',
+//   '/assets/landing/explore/sm_explore_vid_2.webm',
+//   '/assets/landing/explore/sm_explore_vid_3.webm',
+//   '/assets/landing/explore/sm_explore_vid_4.webm',
 // ];
 
 const posters = [
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_1.webp',
-  'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/explore_2.webp',
+  '/assets/landing/explore/explore_1.webp',
+  '/assets/landing/explore/explore_2.webp',
+  '/assets/landing/explore/explore_1.webp',
+  '/assets/landing/explore/explore_2.webp',
 ];
 
 const Explore = () => {

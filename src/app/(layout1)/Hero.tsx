@@ -1,9 +1,9 @@
 'use client';
 
 import Button from '@/shared/Button';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
-import { AnimatePresence, motion } from 'framer-motion';
 
 const videoList = [1, 2, 3, 4, 5];
 
@@ -39,9 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div
-      className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]"
-    >
+    <div className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]">
       <motion.div
         className="mb-14 flex flex-col items-center text-center"
         initial={{ opacity: 0, y: -20 }}
@@ -96,7 +94,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[0]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[0]}.webm`}
                 type="video/webm"
               />
             </motion.video>
@@ -140,7 +138,7 @@ const Hero = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[1]}.webm`}
+                  src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[1]}.webm`}
                   type="video/webm"
                 />
               </motion.video>
@@ -177,7 +175,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[2]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[2]}.webm`}
                 type="video/webm"
               />
             </motion.video>
@@ -210,7 +208,7 @@ const Hero = () => {
                 className="h-full w-full object-cover"
               >
                 <source
-                  src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[3]}.webm`}
+                  src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[3]}.webm`}
                   type="video/webm"
                 />
               </motion.video>
@@ -258,7 +256,7 @@ const Hero = () => {
               className="h-full w-full object-cover"
             >
               <source
-                src={`https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/hero/sm-landing-hero-${randomVideoList[4]}.webm`}
+                src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[4]}.webm`}
                 type="video/webm"
               />
             </motion.video>

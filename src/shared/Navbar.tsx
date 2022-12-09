@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+
 import Button from './Button';
 
 const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
@@ -20,11 +21,7 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
       viewport={{ once: true }}
     >
       <div className="relative h-12 w-40">
-        <Image
-          src="https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/common/sm-logo-blue.svg"
-          alt="smatphotos"
-          fill
-        />
+        <Image src="/assets/common/sm-logo-blue.svg" alt="smatphotos" fill />
       </div>
       <Button className="hidden md:block">Download App</Button>
     </motion.nav>
