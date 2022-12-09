@@ -5,9 +5,7 @@
   "author": "Ritesh Bucha (https://github.com/bucharitesh)",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run build:sanity && npm run build:web",
-    "build:sanity": "npm --prefix sanity build",
-    "build:web": "next build",
+    "build": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next out",
