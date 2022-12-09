@@ -6,9 +6,10 @@ const Page = async () => {
   const settings : any = await getSettings();
 
   return (
-    <div className=" h-[80vh] w-full bg-red-100">
-    <PortableText value={settings[0]?.privacy} />
+    <div className="custom w-full px-12 pt-12 sm:py-24 sm:px-36">
+      <h1 className="mb-12 font-manrope text-5xl font-black">Privacy</h1>
+      <PortableText value={settings[0].privacy} />
     </div>
-)};
+  );};
 
 export default Page;

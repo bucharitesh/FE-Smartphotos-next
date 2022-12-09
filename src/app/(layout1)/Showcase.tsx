@@ -1,21 +1,9 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Showcase = () => {
   return (
     <div className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.4,
-          },
-        }}
-        viewport={{ once: true }}
+      <div
         className="mb-6 grid h-[50rem] w-full grid-rows-2 gap-10 overflow-hidden rounded-3xl bg-brand_black text-brand_white lg:h-full lg:grid-cols-2 lg:grid-rows-1 "
       >
         <div className="order-2 flex h-full w-full flex-col items-center justify-center p-6 lg:order-1 lg:p-10">
@@ -28,18 +16,7 @@ const Showcase = () => {
           </p>
         </div>
         <div className="order-1 grid grid-cols-3 gap-3 overflow-hidden lg:order-2">
-          <motion.div
-            initial={{
-              y: 0,
-            }}
-            whileInView={{ y: '-41%' }}
-            transition={{
-              repeat: Infinity,
-              repeatType: 'reverse',
-              duration: 1,
-              repeatDelay: 2,
-            }}
-            viewport={{ once: true }}
+          <div
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-72 w-full">
@@ -63,19 +40,8 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-          </motion.div>
-          <motion.div
-            initial={{
-              y: '-22%',
-            }}
-            whileInView={{ y: 0 }}
-            transition={{
-              repeat: Infinity,
-              repeatType: 'reverse',
-              duration: 1,
-              repeatDelay: 2,
-            }}
-            viewport={{ once: true }}
+          </div>
+          <div
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-36 w-full ">
@@ -107,19 +73,8 @@ const Showcase = () => {
                 className="object-cover"
               />
             </div>
-          </motion.div>
-          <motion.div
-            initial={{
-              y: '0',
-            }}
-            whileInView={{ y: '-24%' }}
-            transition={{
-              repeat: Infinity,
-              repeatType: 'reverse',
-              duration: 1,
-              repeatDelay: 2,
-            }}
-            viewport={{ once: true }}
+          </div>
+          <div
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-40 w-full">
@@ -141,20 +96,11 @@ const Showcase = () => {
             <div className="relative h-40 w-full">
               <Image src="/assets/landing/showcase/sm-showcase-img-7.webp" alt="show-1" fill />
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
       <div className="grid h-full w-full grid-cols-1 gap-10 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.7,
-            },
-          }}
-          viewport={{ once: true }}
+        <div
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-gradient-to-br from-brand_pink_1 to-brand_blue_3 text-brand_white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
@@ -170,17 +116,8 @@ const Showcase = () => {
             alt="create"
             className="h-full w-auto px-6 pb-6 lg:pr-6 lg:pl-0"
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.7,
-            },
-          }}
-          viewport={{ once: true }}
+        </div>
+        <div
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
@@ -194,7 +131,7 @@ const Showcase = () => {
             alt="scan"
             className="h-full w-auto px-6 pt-6 lg:pr-6 lg:pl-0"
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
