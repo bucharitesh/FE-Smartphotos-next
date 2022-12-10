@@ -7,7 +7,7 @@ const VideoPopup = () => {
   const { videoPlaying, setVideoPlaying } = useContext(GlobalContext) as any;
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       {videoPlaying ? (
         <motion.div
           key="video_player"

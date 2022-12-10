@@ -7,115 +7,87 @@ import Button from '../Button';
 const data = [
   [
     {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
+      name: 'Aleksandra Lagle',
+      username: 'aleklagle',
+      avatar_url: '/assets/landing/testimonials/sm_user_12.webp',
       comment:
-        'Our customers have experienced the magical video prints and never looked back ever since!',
+        'It was so heartwarming to see my baby take her first steps again! The experience was so real!',
     },
     {
-      name: 'Amelie',
-      username: 'AmelieStrom',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
+      name: 'Eloise Delora',
+      username: 'eloise',
+      avatar_url: '/assets/landing/testimonials/sm_user_5.webp',
       comment:
         "Sent our son's birthday SmartPhoto to grandma. She was as happy as I'd ever seen her!",
     },
     {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
+      name: 'Roxane Zoe',
+      username: 'roxane',
+      avatar_url: '/assets/landing/testimonials/sm_user_9.webp',
       comment: 'This reminds me of Harry Potter! So Magical!',
-    },
-    {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
-      comment:
-        'Our customers have experienced the magical video prints and never looked back ever since!',
     },
   ],
   [
     {
-      name: 'Bryce Bjork',
-      username: 'Bryce',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
+      name: 'Jonna Oie',
+      username: 'jonna',
+      avatar_url: '/assets/landing/testimonials/sm_user_2.webp',
       comment: 'Magical!',
     },
     {
-      name: 'Lauren Will',
-      username: 'willlau',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
+      name: 'Zavia Kolleen',
+      username: 'zavia',
+      avatar_url: '/assets/landing/testimonials/sm_user_6.webp',
       comment:
         'Getting my first SmartPhoto was so exciting! The AR experience along with the video was a nice touch!',
     },
     {
-      name: 'Bryce Bjork',
-      username: 'Bryce',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-4.webp',
+      name: 'Sammy Danni',
+      username: 'danni',
+      avatar_url: '/assets/landing/testimonials/sm_user_10.webp',
       comment: 'Received this as a gift and never expected it to be so amazing!',
-    },
-    {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
-      comment:
-        'Our customers have experienced the magical video prints and never looked back ever since!',
     },
   ],
   [
     {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
+      name: 'Catharina Rebecca',
+      username: 'cathyre',
+      avatar_url: '/assets/landing/testimonials/sm_user_3.webp',
       comment:
         "It's so lovely to have my Graduation Day preserved in this SmartPhoto with Photo & Video!",
     },
     {
-      name: 'Amelie',
-      username: 'AmelieStrom',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
+      name: 'Brandee Nannie',
+      username: 'brandnan',
+      avatar_url: '/assets/landing/testimonials/sm_user_7.webp',
       comment: "I'm in love with this!",
     },
     {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
-      comment: 'My wife loved this! I made a SmartPhoto of our wedding and it was priceless!',
-    },
-    {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
-      comment:
-        'Our customers have experienced the magical video prints and never looked back ever since!',
+      name: 'Lailah Keila',
+      username: 'lailah',
+      avatar_url: '/assets/landing/testimonials/sm_user_11.webp',
+      comment: 'My husband loved this! I made a SmartPhoto of our wedding and it was priceless!',
     },
   ],
   [
     {
-      name: 'Lauren Will',
-      username: 'willlau',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-3.webp',
+      name: 'Eirene Dilara',
+      username: 'renedil',
+      avatar_url: '/assets/landing/testimonials/sm_user_4.webp',
       comment:
-        ' I can never go back to normal photos again! The SmartPhotos experience has been so exciting!',
+        'I can never go back to normal photos again! The SmartPhotos experience has been so exciting!',
     },
     {
-      name: 'Bryce Bjork',
-      username: 'Bryce',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-4.webp',
+      name: 'Libby Maggie',
+      username: 'libby',
+      avatar_url: '/assets/landing/testimonials/sm_user_8.webp',
       comment: 'This has made my holiday gifting so easy!',
     },
     {
-      name: 'Bryce Bjork',
-      username: 'Bryce',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-2.webp',
-      comment: 'Magical!',
-    },
-    {
-      name: 'Olaia irigoyen',
-      username: 'olaiairi',
-      avatar_url: '/assets/landing/testimonials/sm-testimonials-1.webp',
-      comment:
-        'Our customers have experienced the magical video prints and never looked back ever since!',
+      name: 'Janna Laurel',
+      username: 'janna',
+      avatar_url: '/assets/landing/testimonials/sm_user_1.webp',
+      comment: 'Never going back to normal photos after this!',
     },
   ],
 ];

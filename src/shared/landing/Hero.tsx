@@ -22,10 +22,7 @@ const Hero = () => {
       currentIndex -= 1;
 
       // And swap it with the current element.
-      [arr[currentIndex], arr[randomIndex]] = [
-        arr[randomIndex],
-        arr[currentIndex],
-      ];
+      [arr[currentIndex], arr[randomIndex]] = [arr[randomIndex], arr[currentIndex]];
     }
     return arr;
   }
@@ -66,7 +63,10 @@ const Hero = () => {
               )
             }
           >
-            <AiFillPlayCircle className="h-10 w-10 text-brand_yellow_1" />
+            <div className="relative h-10 w-10">
+              <AiFillPlayCircle className="h-full w-full text-brand_yellow_1" />
+              <div className="absolute top-1 left-1 h-8 w-8 rounded-full shadow-lg shadow-brand_yellow_1"></div>
+            </div>
             <p className="text-sm font-semibold text-brand_gray_3">Play Demo</p>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -131,7 +131,7 @@ const Hero = () => {
             viewport={{ once: true }}
             className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-40 sm:w-40 lg:w-52"
           >
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode="wait">
               <motion.video
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -165,7 +165,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="h-48 w-[26vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-96 sm:w-40 lg:w-52"
         >
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -201,7 +201,7 @@ const Hero = () => {
             viewport={{ once: true }}
             className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200  sm:h-40 sm:w-40 lg:w-52"
           >
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode="wait">
               <motion.video
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -246,7 +246,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <motion.video
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

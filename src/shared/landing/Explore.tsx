@@ -43,7 +43,7 @@ const Explore = () => {
       <div
         className="mb-14 flex flex-col items-center gap-5 text-center"
       >
-        <h2 className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-6xl font-black text-transparent lg:text-7xl">
+        <h2 className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text pb-1 text-6xl font-black text-transparent lg:text-7xl">
           Little Moments, Big Memories!
         </h2>
         <p className="w-full text-xl font-medium text-brand_gray_1 md:w-1/2 lg:text-2xl">
