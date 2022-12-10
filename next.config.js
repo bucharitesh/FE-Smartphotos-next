@@ -10,9 +10,6 @@ module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: false,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
   reactStrictMode: false,
   output: 'standalone',
 });
