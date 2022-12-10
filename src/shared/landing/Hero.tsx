@@ -1,16 +1,16 @@
-import Button from '@/shared/Button';
 import { useContext, useEffect, useState } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
-// import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { GlobalContext } from '@/context/GlobalState';
+import Button from '../Button';
 
 const videoList = [1, 2, 3, 4, 5];
 
 const Hero = () => {
   const [randomVideoList, setRandomVideoList] = useState(videoList);
-  const { setVideoPlaying }: any = useContext(GlobalContext);
+  const { setVideoPlaying } = useContext(GlobalContext) as any;
 
-  function shuffle(array: number[]) {
+  function shuffle(array: any) {
     const arr = [...array];
     let currentIndex = array.length;
     let randomIndex;
@@ -22,7 +22,7 @@ const Hero = () => {
       currentIndex -= 1;
 
       // And swap it with the current element.
-      [(arr as any)[currentIndex], (arr as any)[randomIndex]] = [
+      [arr[currentIndex], arr[randomIndex]] = [
         arr[randomIndex],
         arr[currentIndex],
       ];
@@ -40,8 +40,17 @@ const Hero = () => {
 
   return (
     <div className="flex h-full w-screen flex-col items-center justify-between bg-white px-6 pt-16 pb-36 md:h-[55rem] md:px-[10%]">
-      <div
+      <motion.div
         className="mb-14 flex flex-col items-center text-center"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.4,
+          },
+        }}
+        viewport={{ once: true }}
       >
         <h1 className="text-7xl font-black text-brand_blue_2">Make Memories Come Alive!</h1>
         <p className="my-6 text-xl font-medium text-brand_gray_2">
@@ -53,7 +62,7 @@ const Hero = () => {
             className="flex cursor-pointer items-center gap-2"
             onClick={() =>
               setVideoPlaying(
-                '/assets/landing/explore/sm_explore_vid_1.webm'
+                'https://homingos-magik.s3.ap-south-1.amazonaws.com/smartphotos-website/landing/explore/sm_explore_vid_1.webm'
               )
             }
           >
@@ -61,12 +70,30 @@ const Hero = () => {
             <p className="text-sm font-semibold text-brand_gray_3">Play Demo</p>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="flex w-full items-center justify-between gap-2 sm:justify-center sm:gap-10">
-        <div
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: {
+              duration: 1,
+              ease: 'easeOut',
+            },
+          }}
+          viewport={{ once: true }}
           className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
-            <video
+          <AnimatePresence exitBeforeEnter>
+            <motion.video
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.4,
+              }}
+              key={randomVideoList[0]}
               muted
               loop
               autoPlay
@@ -77,17 +104,39 @@ const Hero = () => {
                 src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[0]}.webm`}
                 type="video/webm"
               />
-            </video>
-        </div>
+            </motion.video>
+          </AnimatePresence>
+        </motion.div>
 
         <div className="flex flex-col justify-center gap-2 sm:gap-8">
-          <div
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{
+              scale: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: true }}
             className="h-10 w-[25vw] overflow-hidden rounded-3xl bg-[#D1FAE5] sm:h-24 sm:w-40 lg:w-52"
-          ></div>
-          <div
+          ></motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{
+              scale: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: true }}
             className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-40 sm:w-40 lg:w-52"
           >
-              <video
+            <AnimatePresence exitBeforeEnter>
+              <motion.video
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0 }}
                 key={randomVideoList[1]}
                 muted
                 loop
@@ -99,14 +148,32 @@ const Hero = () => {
                   src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[1]}.webm`}
                   type="video/webm"
                 />
-              </video>
-          </div>
+              </motion.video>
+            </AnimatePresence>
+          </motion.div>
         </div>
 
-        <div
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: {
+              duration: 1,
+              ease: 'easeOut',
+            },
+          }}
+          viewport={{ once: true }}
           className="h-48 w-[26vw] overflow-hidden rounded-3xl bg-gray-200 sm:h-96 sm:w-40 lg:w-52"
         >
-            <video
+          <AnimatePresence exitBeforeEnter>
+            <motion.video
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.4,
+              }}
+              viewport={{ once: true }}
               key={randomVideoList[2]}
               muted
               loop
@@ -118,14 +185,28 @@ const Hero = () => {
                 src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[2]}.webm`}
                 type="video/webm"
               />
-            </video>
-        </div>
+            </motion.video>
+          </AnimatePresence>
+        </motion.div>
 
         <div className="flex flex-col justify-center gap-2 sm:gap-8">
-          <div
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{
+              scale: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: true }}
             className="h-20 w-[25vw] overflow-hidden rounded-3xl bg-gray-200  sm:h-40 sm:w-40 lg:w-52"
           >
-              <video
+            <AnimatePresence exitBeforeEnter>
+              <motion.video
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0 }}
                 key={randomVideoList[3]}
                 muted
                 loop
@@ -137,17 +218,43 @@ const Hero = () => {
                   src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[3]}.webm`}
                   type="video/webm"
                 />
-              </video>
-          </div>
-          <div
+              </motion.video>
+            </AnimatePresence>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{
+              scale: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: true }}
             className="h-10 w-[25vw] overflow-hidden rounded-3xl bg-[#FEF3C7] sm:h-24 sm:w-40 lg:w-52"
-          ></div>
+          ></motion.div>
         </div>
 
-        <div
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: {
+              duration: 1,
+              ease: 'easeOut',
+            },
+          }}
+          viewport={{ once: true }}
           className="hidden h-40 w-52 overflow-hidden rounded-3xl bg-gray-200 lg:block"
         >
-            <video
+          <AnimatePresence exitBeforeEnter>
+            <motion.video
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.4,
+              }}
               key={randomVideoList[4]}
               muted
               loop
@@ -159,8 +266,9 @@ const Hero = () => {
                 src={`/assets/landing/hero/sm-landing-hero-${randomVideoList[4]}.webm`}
                 type="video/webm"
               />
-            </video>
-        </div>
+            </motion.video>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );

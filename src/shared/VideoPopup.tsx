@@ -1,14 +1,23 @@
 import { GlobalContext } from '@/context/GlobalState';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useContext } from 'react';
 import { IoClose } from 'react-icons/io5';
 
 const VideoPopup = () => {
-  const { videoPlaying, setVideoPlaying }: any = useContext(GlobalContext);
+  const { videoPlaying, setVideoPlaying } = useContext(GlobalContext) as any;
 
   return (
-    <>
+    <AnimatePresence exitBeforeEnter>
       {videoPlaying ? (
-        <div
+        <motion.div
+          key="video_player"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          viewport={{ once: true }}
+          exit={{ opacity: 0 }}
+          transition={{
+            duration: 0.5,
+          }}
           className="fixed inset-0 z-50 flex h-[100vh] w-[100vw] items-center justify-center bg-black/80"
         >
           <div className="relative h-[90vh] w-[90vw] md:h-[80vh] md:w-[70vw] lg:h-[70vh] lg:w-[30vw] ">
@@ -20,9 +29,11 @@ const VideoPopup = () => {
               <source src={videoPlaying} type="video/webm" />
             </video>
           </div>
-        </div>
-      ) : null}
-    </>
+        </motion.div>
+      ) : (
+        <></>
+      )}
+    </AnimatePresence>
   );
 };
 

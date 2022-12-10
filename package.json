@@ -17,6 +17,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "framer-motion": "^7.6.19",
     "locomotive-scroll": "^4.1.4",
     "next": "^13.0.6",
     "next-sanity": "^3.1.3",

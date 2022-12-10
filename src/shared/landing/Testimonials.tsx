@@ -1,8 +1,8 @@
-import Button from '@/shared/Button';
-import InfiniteLooper from '@/shared/InfiniteLooper';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
+import InfiniteLooper from '../InfiniteLooper';
+import Button from '../Button';
 
 const data = [
   [
@@ -126,23 +126,41 @@ const Testimonials = () => {
   return (
     <div className="h-full px-6 pt-20 lg:min-h-[60rem] lg:px-[10%]">
       <div className="mb-10 flex flex-col items-center gap-6 text-center">
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
           className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text text-6xl font-black text-transparent lg:text-7xl"
         >
           Over 1 Million Memories, Re-Lived!
-        </h2>
-        <p
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
           className="w-full text-xl font-medium text-brand_gray_2 lg:w-1/2 lg:text-2xl"
         >
           Our customers have experienced the magical video prints and never looked back ever since!
-        </p>
+        </motion.p>
       </div>
       <div className="relative px-4 pt-10 md:px-10">
         <div className="hidden lg:grid lg:grid-cols-4">
           {data.map((item, i) => {
             return (
               <InfiniteLooper
-                // direction={i === 0 || i === 2 ? 'down' : 'up'}
+                direction={i === 0 || i === 2 ? 'down' : 'up'}
                 key={`item_${i}`}
                 list={item}
               />
@@ -162,7 +180,7 @@ const Testimonials = () => {
                         <Image src={item.avatar_url} alt={item.username} fill />
                       </div>
                       <div>
-                        <p className="font-black text-brand_black">{item.name}</p>
+                        <p className="text-md font-black text-brand_black">{item.name}</p>
                         <p className="text-sm text-brand_gray_6">@{item.username}</p>
                       </div>
                     </div>
