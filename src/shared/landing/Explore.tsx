@@ -1,16 +1,9 @@
 import { GlobalContext } from '@/context/GlobalState';
 import Button from '@/shared/Button';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useContext } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
-
-// const data = [
-//   '/assets/landing/explore/sm_explore_vid_1.webm',
-//   '/assets/landing/explore/sm_explore_vid_2.webm',
-//   '/assets/landing/explore/sm_explore_vid_3.webm',
-//   '/assets/landing/explore/sm_explore_vid_4.webm',
-// ];
 
 const posters = [
   {
@@ -40,7 +33,16 @@ const Explore = () => {
 
   return (
     <div className="flex flex-col justify-between bg-brand_black px-6 py-20 text-brand_white lg:min-h-[55rem] lg:px-[10%]">
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true }}
         className="mb-14 flex flex-col items-center gap-5 text-center"
       >
         <h2 className="bg-gradient-to-r from-brand_blue_4 to-brand_blue_5 bg-clip-text pb-1 text-6xl font-black text-transparent lg:text-7xl">
@@ -50,13 +52,24 @@ const Explore = () => {
           Explore how SmartPhotos brings memories alive with extraordinary experiences!
         </p>
         <Button>Download App</Button>
-      </div>
-      <div className="flex w-full gap-8 overflow-x-auto lg:grid lg:h-96 lg:grid-cols-4 lg:overflow-x-hidden">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true }}
+        className="flex w-full gap-5 overflow-x-auto lg:grid lg:h-96 lg:grid-cols-4 lg:gap-8 lg:overflow-x-hidden"
+      >
         {posters.map((item) => {
           return (
             <div
               key={item.id}
-              className="relative h-96 w-full min-w-[20rem] cursor-pointer overflow-hidden rounded-3xl lg:min-w-0"
+              className="relative h-96 w-[70vw] shrink-0 cursor-pointer overflow-hidden rounded-3xl md:w-[40vw] lg:w-full lg:min-w-0"
               onClick={() => setVideoPlaying(item.vid)}
             >
               <Image src={item.img} alt="Explore" fill className="h-full w-full object-cover" />
@@ -65,7 +78,7 @@ const Explore = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
