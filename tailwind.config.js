@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         brand_gray_1: '#F9FAFB',
         brand_gray_2: '#6B7280',
-        brand_gray_3: '##686D77',
+        brand_gray_3: '#686D77',
         brand_gray_4: '#374151',
         brand_gray_5: '#D1D5DB',
         brand_gray_6: '#4B5563',
