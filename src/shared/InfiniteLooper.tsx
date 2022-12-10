@@ -1,23 +1,23 @@
 import Image from "next/image";
-// import {motion} from "framer-motion"
+import {motion} from "framer-motion"
 
 const InfiniteLooper = function InfiniteLooper({
   list,
-  // direction = 'down',
+  direction = 'down',
 }: {
   list: any[];
-  // direction: 'up' | 'down';
+  direction: 'up' | 'down';
 }) {
   return (
     <div className="h-[40rem] overflow-y-hidden px-4">
-      <div
-        // initial={{
-        //   y: direction === 'down' ? '-50.5%' : '0',
-        // }}
-        // animate={{
-        //   y: direction === 'down' ? '0' : '-50.5%',
-        // }}
-        // transition={{ duration: 30, type: 'tween', repeat: Infinity, repeatType: 'loop', repeatDelay: 0, ease: "linear" }}
+      <motion.div
+        initial={{
+          y: direction === 'down' ? '-50.5%' : '0',
+        }}
+        animate={{
+          y: direction === 'down' ? '0' : '-50.5%',
+        }}
+        transition={{ duration: 30, type: 'tween', repeat: Infinity, repeatType: 'loop', repeatDelay: 0, ease: "linear" }}
         className="flex flex-col gap-4"
       >
         {[...list, ...list].map((subItem, ind) => {
@@ -39,7 +39,7 @@ const InfiniteLooper = function InfiniteLooper({
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,9 +1,18 @@
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Showcase = () => {
   return (
     <div className="h-auto w-screen gap-4 bg-brand_gray_1 px-6 py-20 lg:grid lg:h-[70rem] lg:grid-rows-2 lg:px-[10%]">
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.4,
+          },
+        }}
+        viewport={{ once: true }}
         className="mb-6 grid h-[50rem] w-full grid-rows-2 gap-10 overflow-hidden rounded-3xl bg-brand_black text-brand_white lg:h-full lg:grid-cols-2 lg:grid-rows-1 "
       >
         <div className="order-2 flex h-full w-full flex-col items-center justify-center p-6 lg:order-1 lg:p-10">
@@ -16,7 +25,18 @@ const Showcase = () => {
           </p>
         </div>
         <div className="order-1 grid grid-cols-3 gap-3 overflow-hidden lg:order-2">
-          <div
+          <motion.div
+            initial={{
+              y: "-5%",
+            }}
+            whileInView={{ y: '-35%' }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-72 w-full">
@@ -25,31 +45,39 @@ const Showcase = () => {
               </video>
             </div>
             <div className="relative h-40 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-1.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="relative h-72 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-3.webp"
                 alt="show-3"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{
+              y: '-18.5%',
+            }}
+            whileInView={{ y: 0 }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-36 w-full ">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-2.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="relative h-36 w-full">
@@ -58,49 +86,65 @@ const Showcase = () => {
               </video>
             </div>
             <div className="relative h-36 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-3.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="relative h-36 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-4.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{
+              y: '0',
+            }}
+            whileInView={{ y: '-20%' }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 1,
+              repeatDelay: 2,
+            }}
+            viewport={{ once: true }}
             className="flex h-full w-full flex-col gap-3"
           >
             <div className="relative h-40 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-5.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="relative h-72 w-full">
-              <Image
+              <img
                 src="/assets/landing/showcase/sm-showcase-img-6.webp"
                 alt="show-1"
-                fill
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="relative h-40 w-full">
-              <Image src="/assets/landing/showcase/sm-showcase-img-7.webp" alt="show-1" fill />
+              <img src="/assets/landing/showcase/sm-showcase-img-7.webp" alt="show-1" className='h-full w-full'  />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       <div className="grid h-full w-full grid-cols-1 gap-10 lg:grid-cols-2">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.7,
+            },
+          }}
+          viewport={{ once: true }}
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-gradient-to-br from-brand_pink_1 to-brand_blue_3 text-brand_white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
@@ -116,8 +160,17 @@ const Showcase = () => {
             alt="create"
             className="h-full w-auto px-6 pb-6 lg:pr-6 lg:pl-0"
           />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.7,
+            },
+          }}
+          viewport={{ once: true }}
           className="flex flex-col-reverse gap-3 overflow-hidden rounded-3xl bg-white shadow-xl lg:flex-row"
         >
           <div className="flex flex-col justify-center p-6 lg:p-10">
@@ -131,7 +184,7 @@ const Showcase = () => {
             alt="scan"
             className="h-full w-auto px-6 pt-6 lg:pr-6 lg:pl-0"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
