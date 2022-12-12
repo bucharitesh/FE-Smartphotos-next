@@ -1,10 +1,12 @@
-import RootLayout from '@/layouts/Layout2';
+import Main from '@/layouts/Main';
 
-const Page = () => {
+const Privacy = () => {
   return (
-    <RootLayout>
+    <Main title='' description='' grayBg={true}>
       <div className="custom">
-        <h1 className="bg-brand_gray_1 py-20 px-10 font-manrope text-5xl font-black md:px-[10%]">Privacy</h1>
+        <h1 className="bg-brand_gray_1 py-20 px-10 font-manrope text-5xl font-black md:px-[10%]">
+          Privacy
+        </h1>
         <div className="p-10 font-manrope text-xl md:px-[10%]">
           <p>
             We, at Flying Flamingos India Pvt Ltd respect your privacy. We appreciate your trust in
@@ -247,8 +249,8 @@ const Page = () => {
           </p>
         </div>
       </div>
-    </RootLayout>
+    </Main>
   );
 };
 
-export default Page;
+export default Privacy;

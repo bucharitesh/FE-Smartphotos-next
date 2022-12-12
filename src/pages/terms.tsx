@@ -1,10 +1,12 @@
-import RootLayout from '@/layouts/Layout2';
+import Main from '@/layouts/Main';
 
 const Page = () => {
   return (
-    <RootLayout>
+    <Main title="" description="" grayBg={true}>
       <div className="custom">
-        <h1 className="bg-brand_gray_1 py-20 px-10 font-manrope text-5xl font-black md:px-[10%]">Terms</h1>
+        <h1 className="bg-brand_gray_1 py-20 px-10 font-manrope text-5xl font-black md:px-[10%]">
+          Terms
+        </h1>
         <div className="p-10 font-manrope text-xl md:px-[10%]">
           <p>Welcome to www.flamapp.com. The Terms of Use governs your usage of the Website.</p>
           <p>
@@ -434,7 +436,7 @@ const Page = () => {
           </p>
         </div>
       </div>
-    </RootLayout>
+    </Main>
   );
 };
 
