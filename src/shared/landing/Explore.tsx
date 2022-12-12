@@ -51,7 +51,13 @@ const Explore = () => {
         <p className="w-full text-xl font-medium text-brand_gray_1 md:w-1/2 lg:text-2xl">
           Explore how SmartPhotos brings memories alive with extraordinary experiences!
         </p>
-        <Button>Download App</Button>
+        <Button
+          onClick={() => {
+            window.open('https://onelink.to/smartphotos');
+          }}
+        >
+          Download App
+        </Button>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}

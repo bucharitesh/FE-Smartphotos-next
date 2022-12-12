@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Button from './Button';
 
@@ -9,10 +10,17 @@ const Navbar = ({ grayBg = false }: { grayBg?: boolean }) => {
         grayBg ? 'bg-brand_gray_1' : 'bg-brand_white'
       }`}
     >
-      <div className="relative h-12 w-40">
+      <Link href="/" className="relative h-12 w-40">
         <Image src="/assets/common/sm-logo-blue.svg" alt="smatphotos" fill />
-      </div>
-      <Button className="hidden md:block">Download App</Button>
+      </Link>
+      <Button
+        onClick={() => {
+          window.open('https://onelink.to/smartphotos');
+        }}
+        className="hidden md:block"
+      >
+        Download App
+      </Button>
     </nav>
   );
 };
