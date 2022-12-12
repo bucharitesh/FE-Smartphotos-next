@@ -54,7 +54,14 @@ const Hero = () => {
           Re-live your memories in Video Prints with extraordinary AR Experiences!
         </p>
         <div className="flex flex-col items-center gap-6 sm:flex-row md:gap-10">
-          <Button className="py-3">Download App</Button>
+          <Button
+            onClick={() => {
+              window.open('https://onelink.to/smartphotos');
+            }}
+            className="py-3"
+          >
+            Download App
+          </Button>
           <div
             className="flex cursor-pointer items-center gap-2"
             onClick={() =>
