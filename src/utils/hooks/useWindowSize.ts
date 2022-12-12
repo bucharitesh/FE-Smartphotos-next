@@ -1,23 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export default function useWindowSize() {
-  function getSize() {
-    return {
+import { useEventListener, useIsomorphicLayoutEffect } from 'usehooks-ts';
+
+interface WindowSize {
+  width: number;
+  height: number;
+}
+
+function useWindowSize(): WindowSize {
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: 0,
+    height: 0,
+  });
+
+  const handleSize = () => {
+    setWindowSize({
       width: window.innerWidth,
       height: window.innerHeight,
-    };
-  }
+    });
+  };
 
-  const [windowSize, setWindowSize] = useState(getSize);
+  useEventListener('resize', handleSize);
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize(getSize());
-    }
+  // Set size at the first client-side load
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+  useIsomorphicLayoutEffect(() => {
+    handleSize();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return windowSize;
 }
+
+export default useWindowSize;

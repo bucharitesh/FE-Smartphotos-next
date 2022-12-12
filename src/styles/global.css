@@ -42,6 +42,16 @@ html {
    color: #6B7280;
 }
 
+.parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
 @tailwind components;
 
 @tailwind utilities;
