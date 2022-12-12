@@ -3,7 +3,6 @@ import Footer from '@/shared/Footer';
 
 import type { ReactNode } from 'react';
 import { Meta } from '@/layouts/Meta';
-import SmoothScroll from './SmoothScroll';
 
 type IMainProps = {
   title: string;
@@ -13,12 +12,12 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-    <SmoothScroll>
-      <Meta title={props.title} description={props.description} />
-      <Navbar grayBg={props.grayBg} />
-      {props.children}
-      <Footer />
-    </SmoothScroll>
+  <div className="antialiased">
+    <Meta title={props.title} description={props.description} />
+    <Navbar grayBg={props.grayBg} />
+    {props.children}
+    <Footer />
+  </div>
 );
 
 export default Main;
