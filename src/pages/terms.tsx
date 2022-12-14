@@ -1,5 +1,5 @@
 import RootLayout from '@/layouts/Layout2';
-import { Main } from '@/templates/Main';
+import  Main from '@/templates/Main';
 
 const Page = () => {
   return (

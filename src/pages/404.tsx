@@ -1,5 +1,5 @@
 import RootLayout from '@/layouts/Layout1';
-import { Main } from '@/templates/Main';
+import Main from '@/templates/Main';
 import Image from 'next/image';
 
 const Page = () => {
@@ -18,8 +18,8 @@ const Page = () => {
               className="object-fit"
             />
           </div>
-          <h2 className='font-gilroy text-3xl font-bold'>Oops !</h2>
-          <p className='font-manrope text-lg font-medium text-brand_gray_2'>Something went wrong</p>
+          <h2 className="font-gilroy text-3xl font-bold">Oops !</h2>
+          <p className="font-manrope text-lg font-medium text-brand_gray_2">Something went wrong</p>
         </div>
       </RootLayout>
     </Main>

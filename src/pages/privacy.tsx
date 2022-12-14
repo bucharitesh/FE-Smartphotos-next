@@ -1,5 +1,5 @@
-import RootLayout from '@/layouts/Layout1';
-import Main from '@/layouts/Main';
+import RootLayout from '@/layouts/Layout2';
+import Main from '@/templates/Main';
 
 const Privacy = () => {
   return (
