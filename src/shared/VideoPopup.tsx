@@ -20,7 +20,7 @@ const VideoPopup = () => {
           }}
           className="fixed inset-0 z-50 flex h-[100vh] w-[100vw] items-center justify-center bg-black/80"
         >
-          <div className="relative h-[90vh] w-[90vw] md:h-[80vh] md:w-[70vw] lg:h-[70vh] lg:w-[30vw] ">
+          <div className="relative h-[50vh] w-fit md:h-[70vh] md:w-fit ">
             <IoClose
               onClick={() => setVideoPlaying('')}
               className="absolute -top-10 right-0 h-6 w-6 cursor-pointer text-brand_white"

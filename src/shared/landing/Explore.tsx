@@ -8,22 +8,22 @@ import { AiFillPlayCircle } from 'react-icons/ai';
 const posters = [
   {
     id: '1',
-    img: '/assets/landing/explore/explore_1.webp',
+    img: '/assets/landing/explore/explore2.webp',
     vid: '/assets/landing/explore/sm_explore_vid_1.webm',
   },
   {
     id: '2',
-    img: '/assets/landing/explore/explore_2.webp',
+    img: '/assets/landing/explore/explore3.webp',
     vid: '/assets/landing/explore/sm_explore_vid_2.webm',
   },
   {
     id: '3',
-    img: '/assets/landing/explore/explore_1.webp',
+    img: '/assets/landing/explore/explore1.webp',
     vid: '/assets/landing/explore/sm_explore_vid_3.webm',
   },
   {
     id: '4',
-    img: '/assets/landing/explore/explore_2.webp',
+    img: '/assets/landing/explore/explore4.webp',
     vid: '/assets/landing/explore/sm_explore_vid_4.webm',
   },
 ];
