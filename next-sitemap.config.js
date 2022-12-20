@@ -5,4 +5,5 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  generateIndexSitemap: false,
 };
