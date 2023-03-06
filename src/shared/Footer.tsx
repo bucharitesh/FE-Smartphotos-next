@@ -41,7 +41,7 @@ const Footer = () => {
         </p>
         <ul className="flex items-center gap-5">
           <li>
-            <a target="_blank" rel="noreferrer" href="https://discord.gg/gXhxQ8ydDV">
+            <a target="_blank" rel="noreferrer" href="https://discord.gg/vAdms5T3nq">
               <div className="relative h-6 w-6 cursor-pointer md:h-4 md:w-4">
                 <Image src="/assets/common/discord-logo.svg" alt="discord" fill />
               </div>
